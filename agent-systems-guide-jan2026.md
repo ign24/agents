@@ -57,7 +57,7 @@ La definición académica de "agente" (sistemas que perciben, razonan y actúan)
 
 > **Un agente es un LLM con capacidad de usar herramientas de software y tomar acciones autónomas.**
 
-Esta definición simple captura lo esencial: el modelo no solo responde preguntas, **hace cosas**. La diferencia entre ChatGPT-4 en 2023 y Claude Code en 2026 no está en qué tan bien razona el modelo —aunque ha mejorado— sino en su capacidad de **actuar**.
+Esta definición simple captura lo esencial: el modelo no solo responde preguntas, **hace cosas**.
 
 ### 1.2 Workflows vs Agents: La Distinción Fundamental
 
