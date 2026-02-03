@@ -59,4 +59,4 @@ El contenido de esta guía está bajo [MIT](./LICENSE). Podés usar, compartir y
 
 ---
 
-*Última actualización del documento: Enero 2026.*
+*Última actualización del documento: Febrero 2026.*
