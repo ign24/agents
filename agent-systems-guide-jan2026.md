@@ -223,7 +223,7 @@ graph TB
 
 **Key Insights de Anthropic Research:**
 
-1. **Teach orchestrators to delegate bien**
+1. **Teach orchestrators para delegar bien**
    - Instrucciones vagas ("research AI") → workers duplican trabajo
    - Instrucciones específicas ("find papers on multi-agent coordination published after 2024") → división efectiva
 
@@ -237,7 +237,7 @@ graph TB
    - ✅ Worker → Filesystem → Full results saved, Orchestrator reads cuando necesita
 
 4. **External memory para evitar context overflow**
-   - Lead agent summarizes work phases
+   - El agente principal resume las fases de trabajo
    - Guarda en external storage antes de context limit
    - Spawns fresh workers con contexto limpio cuando necesario
 
@@ -247,9 +247,9 @@ graph TB
 - Cost: 3-5x más que single-agent
 - Success rate: 85-95% en research tasks
 
-### 2.3 Hierarchical Multi-Agent: La Org Chart Digital
+### 2.3 Hierarchical Multi-Agent
 
-Cuando necesitás especialización profunda Y coordinación cross-domain, entran las jerarquías:
+Cuando necesitás especialización profunda y coordinación cross-domain, entran las jerarquías:
 
 ```mermaid
 graph TB
@@ -285,12 +285,12 @@ Este pattern está emergiendo en **enterprise SaaS multi-tenant**. Cada "departa
 
 ### 2.4 La Realidad de la Adopción
 
-Salesforce predice "2026 será el año del lonely agent" — empresas crearán cientos de agentes por empleado, pero la mayoría estarán idle. Como software licenses que nadie usa.
+Salesforce predice "2026 será el año del lonely agent": empresas crearán cientos de agentes por empleado, pero la mayoría estarán idle. Como software licenses que nadie usa.
 
 El problema no es técnico. Es organizacional:
 - **67% de organizaciones están experimentando** con agentes
 - **Solo 24% los han llevado a producción**
-- **Los que sí escalan son 3x más likely** a haber rediseñado workflows, no solo agregado IA encima
+- **Los que sí escalan son 3x más probables** a haber rediseñado workflows, no solo agregado IA encima
 
 McKinsey lo resume: *"El éxito requiere redesign de procesos, no adición de agentes."*
 
@@ -298,7 +298,7 @@ McKinsey lo resume: *"El éxito requiere redesign de procesos, no adición de ag
 
 ## 3. Patrones de Diseño que Funcionan
 
-Anthropic documentó seis building blocks composables en "Building Effective Agents". Estos no son teóricos — son los patrones que LinkedIn, Replit, Elastic, y cientos de otros usan en producción.
+Anthropic documentó seis bloques de construcción componibles en "Building Effective Agents". Estos no son teóricos, son los patrones que LinkedIn, Replit, Elastic, y cientos de otros usan en producción.
 
 ### 3.1 Augmented LLM: El Baseline
 
@@ -374,7 +374,7 @@ graph TB
     
 ```
 
-El router es un modelo pequeño y rápido (Haiku, GPT-3.5). Los specialists son modelos grandes (Sonnet, GPT-4).
+El router es un modelo pequeño y rápido (Haiku, GPT-3.5). Los specialists son modelos grandes (Sonnet, Opus, GPT-5).
 
 **Ahorro típico:** 60% en costs (la mayoría de queries van a modelos baratos)
 
@@ -431,11 +431,11 @@ graph TB
     
 ```
 
-Anthropic usa esto en Claude Code. El agente genera código, otro agente lo evalúa contra tests y best practices, feedback loop hasta que pasa quality bar.
+Anthropic usa esto en Claude Code. El agente genera código, otro agente lo evalúa contra tests y best practices, feedback loop hasta que pasa una vara de calidad.
 
 **Costo:** 2-4x más tokens
 **Benefit:** 40-60% menos errores en output final
-**Production tip:** Set max iterations (típicamente 3) para evitar infinite loops
+**Production tip:** Set max iterations (típicamente 3) para evitar loops infinitos
 
 ### 3.6 El Principio de Composición
 
@@ -494,9 +494,9 @@ Enero 2026 trajo consolidación. El top de frameworks según búsquedas de desar
 - **n8n** - Workflow automation con AI
 - **Google ADK** - Agent Development Kit, nuevo
 
-La verdad incómoda: **60% de production systems no usan ningún framework**. Construyen custom usando primitives básicos (LLM API + function calling + custom orchestration).
+La verdad incómoda: **60% de production systems no usan ningún framework**. Construyen customs usando primitives básicos (LLM API + function calling + custom orchestration).
 
-¿Por qué? Frameworks agregan abstraction layers que complican debugging. En producción, querés control total.
+¿Por qué? Frameworks agregan capas de abstracción que complican debugging. En producción, queremos control total.
 
 ### 4.2 El Stack Técnico Real
 
@@ -555,9 +555,9 @@ graph TB
 
 **Layer 1: Foundation Models**
 
-2026 es el año de "modelo correcto para el job":
+2026 es el año de "modelo correcto para el trabajo":
 - **Reasoning tasks:** Claude Opus 4.5, o1-preview
-- **General intelligence:** Claude Sonnet 4, GPT-4.5
+- **General intelligence:** Claude Sonnet 4.5, GPT-5.2
 - **Speed/cost:** Claude Haiku 3.5, GPT-4o-mini
 - **Open source:** DeepSeek-R1, Llama 4
 
@@ -591,7 +591,7 @@ Esto merece su propia sección...
 
 ### 5.1 Por Qué Memory Define Success
 
-Un agente sin memoria es un empleado con amnesia. Puede razonar brillantemente cada vez, pero empieza de cero en cada conversación.
+Un agente sin memoria es el mejor empleado con amnesia. Puede razonar brillantemente cada vez, pero empieza de cero en cada conversación.
 
 En 2026, la diferencia entre demos y producción está en memory architecture. Los sistemas que escalan tienen estrategias sofisticadas para:
 - Qué recordar
@@ -734,7 +734,7 @@ Los benchmarks académicos siguen siendo importantes, pero la industria se movi�
 
 Pero hay un problema: **benchmarks lag capabilities**.
 
-El momento que un benchmark se publica, equipos lo over-fit. SWE-bench Verified era "impossible" en 2024. En 2026, es commoditized.
+En el momento que un benchmark se publica, los equipos se casan con él. SWE-bench Verified era "imposible" en 2024. En 2026, ya es un commodity.
 
 ### 6.2 Production Evaluation: Lo que Realmente Importa
 
@@ -818,11 +818,11 @@ graph TB
 
 ### 7.1 Por Qué Agents Son Diferentes
 
-Debuggear un web service: logs, stack traces, predecible.
+Debuggear un servicio web: logs, stack traces, predecible.
 
 Debuggear un agent: *"¿Por qué decidió usar la herramienta equivocada?"*
 
-El problema es que el agent's decision-making es opaco. El LLM razona internamente, luego output es una acción. Sin observability, estás volando ciego.
+El problema es que el agent's decision-making es opaco. El LLM razona internamente, luego el output es una acción. Sin observability, estás volando ciego.
 
 ### 7.2 La Estructura de Tracing
 
@@ -853,10 +853,10 @@ Dentro de spans: **Generations** (LLM calls), **Retrievals** (DB queries), **Too
 
 **What you track:**
 - Input/output de cada step
-- Latency por component
+- Latency por componente
 - Token usage (cost)
-- Errors y retry attempts
-- Model parameters (temperature, max_tokens)
+- Errores y retrys
+- Parámetros del modelo (temperature, max_tokens)
 
 ### 7.3 Langfuse vs LangSmith: La Decisión en 2026
 
@@ -878,11 +878,11 @@ Dentro de spans: **Generations** (LLM calls), **Retrievals** (DB queries), **Too
 - **Self-hosting required:** Langfuse (only option)
 - **Lean startup:** Langfuse (generous free tier)
 
-Anthropic internamente usa custom observability (no sorpresa). OpenAI teams usan mix de LangSmith y internal tools. Google pushing its own Vertex AI monitoring.
+Anthropic internamente usa custom observability. OpenAI teams usan mix de LangSmith y tools internas. Google impulsa su propio monitoring con VertexAI.
 
 ### 7.4 El Dashboard que Importa
 
-No necesitás 50 metrics. Necesitás estas:
+No necesitás 50 metricas. Necesitás estas:
 
 ```
 ┌─────────────────────────────────────────┐
@@ -908,7 +908,7 @@ Highest Cost Traces:
 1. trace_def123 - $4.50 (used GPT-4 + 15 tool calls)
 ```
 
-Esto es actionable. Ves que tool timeouts son tu #1 problem. Investigás, descubrís que el search API está lento. Switcheas a provider más rápido o aumentás timeout. Done.
+Esto es accionable. Ves que tool timeouts es tu problema #1. Investigás, descubrís que el search API está lento. Switcheas a provider más rápido o aumentás timeout. Listo.
 
 ---
 
@@ -1037,7 +1037,7 @@ spec:
 
 **Key:** `stabilizationWindowSeconds` previene flapping (scale up/down constante).
 
-**Real-world:** LinkedIn's SQL Bot autoscales de 3 pods (off-hours) a 15 pods (business hours peak). Cost optimization automática.
+**Real-world:** LinkedIn's SQL Bot autoescala de 3 pods (off-hours) a 15 pods (business hours peak). Cost optimization automático.
 
 ### 8.3 Security: El Top 3 de Vulnerabilities
 
@@ -1108,15 +1108,15 @@ graph TD
 **2026 Reality Check:**
 
 60% de production systems **no usan framework**. Construyen custom porque:
-- Debugging frameworks es hell
+- Debuggear frameworks es el infierno
 - Abstractions leak en lugares inesperados
 - Performance overhead (frameworks agregan 10-20% latency)
-- Lock-in a ecosystem específico
+- Lock-in a ecosistema específico
 
-Pero frameworks son perfectos para:
+Pero algunos frameworks son perfectos para:
 - Prototyping rápido
 - Equipos sin deep agent expertise
-- Standard patterns bien soportados
+- Patrones estándar bien soportados
 
 **Anthropic's advice:** *"Start simple. Add complexity only when it clearly improves performance."*
 
@@ -1276,24 +1276,10 @@ Early work: Microsoft's Autogen con reflection, Anthropic's constitutional AI pr
 **Multi-Modal Agentic Systems**
 
 Vision + Language + Action. Anthropic's Computer Use es el preview. Agent que puede:
-- Ver screens
-- Read documents
-- Navigate browsers
-- Interact con UIs
-
-**Prediction:** 2027 será el año de embodied agents (robots con agent brains).
-
-**Formal Verification**
-
-¿Podemos *probar* que un agent hará lo correcto? Research en bounded autonomy, safety guarantees, formal methods aplicados a LLMs.
-
-**Why it matters:** Regulación va a requerir esto. Finance, healthcare, critical infrastructure no van a aceptar "probably works most of the time".
-
-**Agent-to-Agent Communication**
-
-Google's A2A (Agent2Agent) protocol. Agents de diferentes providers hablando entre sí.
-
-**Vision:** Tu coding agent (Anthropic) colabora con data analyst agent (OpenAI) colabora con deployment agent (Google). Interoperability.
+- Ver pantallas
+- Leer documentos
+- Navegar en browsers
+- Interactuar con UIs
 
 ---
 
@@ -1301,27 +1287,19 @@ Google's A2A (Agent2Agent) protocol. Agents de diferentes providers hablando ent
 
 Si 2025 fue hype, 2026 es ejecución.
 
-Los demos son fáciles. Production es hard. La diferencia está en:
+Los demos son fáciles. Producción es más complicado. La diferencia está en:
 
 1. **Arquitectura bien pensada** - No el framework más nuevo, el pattern correcto
-2. **Memory estratégica** - No "guardemos todo", qué es relevante y retrievable
+2. **Memory estratégica** - No "guardemos todo", qué es relevante y rastreable
 3. **Observability desde día 1** - No "lo agregamos después", lo instrumentamos ahora
 4. **Security no-negotiable** - No "lo vemos más adelante", lo diseñamos desde el inicio
 5. **Evaluación pragmática** - No benchmarks académicos, métricas de negocio
 
 **La oportunidad para builders en 2026:**
 
-La infraestructura está madurando. MCP estandarizó tools. Frameworks consolidaron. Patterns están documentados. Security frameworks emergiendo.
+La infraestructura está madurando. MCP estandarizó tools. Los frameworks se consolidaron. Los patterns están documentados. Hay frameworks de seguridad emergiendo.
 
 Pero **solo 24% de organizaciones lograron llevar agents a producción**. El gap es enorme.
-
-**Los que van a ganar:**
-
-No son los que tienen el modelo más grande. Son los que:
-- Entienden cuándo usar workflows vs agents
-- Diseñan memory architecture correcta para su use case
-- Implementan observability que permite debugging real
-- Escalan de forma sostenible (cost + reliability)
 
 **Tu próximo paso:**
 
@@ -1331,7 +1309,7 @@ Empezá simple. Single agent, 2-3 tools, memory básica. Deployá a staging. Ins
 
 Cuando veas los patrones en failures, ahí sabés qué complejidad agregar.
 
-Este es el momento. La infraestructura está lista. Los models son capaces. La industria está buscando solutions productionalizadas.
+Este es el momento. La infraestructura está lista. Los models son capaces. La industria está buscando soluciones produccionalizables.
 
 **El futuro no es predecir qué va a pasar. Es construirlo.**
 
