@@ -24,7 +24,7 @@ Salteala si buscás teoría, marcos académicos o ejemplos juguete.
 
 ## Prólogo: El Momento de Inflexión
 
-Estamos en enero de 2026, y la industria atraviesa su transición más significativa desde que los transformers revolucionaron el NLP en 2017. El cambio no está en los modelos —aunque GPT-4.5, Claude Opus 4.5 y Gemini 2.5 Pro siguen empujando fronteras— sino en cómo los estamos usando.
+Estamos en enero de 2026, y la industria atraviesa su transición más significativa desde que los transformers revolucionaron el NLP en 2017. El cambio no está en los modelos, aunque GPT-4.5, Claude Opus 4.5 y Gemini 2.5 Pro siguen empujando fronteras, sino en cómo los estamos usando.
 
 2025 fue "el año de los agentes", según prácticamente todo analista de la industria. Pero la realidad es más matizada: **fue el año en que los agentes salieron del laboratorio**. Anthropic liberó el Model Context Protocol (MCP) en diciembre 2024, creando el "USB-C para IA" que permitió que los LLMs finalmente hablaran con el mundo exterior de forma estandarizada. OpenAI y Microsoft lo adoptaron inmediatamente. Google lanzó su propia implementación. Linux Foundation creó la Agentic AI Foundation.
 
