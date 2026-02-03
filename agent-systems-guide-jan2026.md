@@ -65,25 +65,28 @@ Esta definición simple captura lo esencial: el modelo no solo responde pregunta
 
 El primer error que cometen los equipos es confundir estos dos paradigmas:
 
+**Workflow: orquestación predefinida**
+
 ```mermaid
 graph TB
-    subgraph "WORKFLOW: Orchestración Predefinida"
-        W1[Input: PDF Invoice] --> W2{Step 1: Extract Data}
-        W2 --> W3{Step 2: Validate Format}
-        W3 --> W4{Step 3: Store in Database}
-        W4 --> W5[Output: Confirmation]
-    end
-    
-    subgraph "AGENT: Decisiones Dinámicas"
-        A1[Input: 'Fix this GitHub issue'] --> A2{Agent Reasoning}
-        A2 -->|Reads code| T1[Tool: File Reader]
-        T1 --> A2
-        A2 -->|Searches docs| T2[Tool: Web Search]
-        T2 --> A2
-        A2 -->|Runs tests| T3[Tool: Test Runner]
-        T3 --> A2
-        A2 -->|Decides complete| A3[Output: Pull Request]
-    end
+    W1[Input: PDF Invoice] --> W2{Step 1: Extract Data}
+    W2 --> W3{Step 2: Validate Format}
+    W3 --> W4{Step 3: Store in Database}
+    W4 --> W5[Output: Confirmation]
+```
+
+**Agent: decisiones dinámicas**
+
+```mermaid
+graph TB
+    A1[Input: 'Fix this GitHub issue'] --> A2{Agent Reasoning}
+    A2 -->|Reads code| T1[Tool: File Reader]
+    T1 --> A2
+    A2 -->|Searches docs| T2[Tool: Web Search]
+    T2 --> A2
+    A2 -->|Runs tests| T3[Tool: Test Runner]
+    T3 --> A2
+    A2 -->|Decides complete| A3[Output: Pull Request]
 ```
 
 **Workflows** son deterministas. Sabes exactamente qué va a pasar. Son perfectos para procesos bien definidos: procesamiento de facturas, pipelines ETL, aprobaciones secuenciales.
