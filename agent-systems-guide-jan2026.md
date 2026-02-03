@@ -21,13 +21,13 @@ Deberías leerla si:
 
 ## Prólogo: El Momento de Inflexión
 
-Estamos en enero de 2026, y la industria atraviesa su transición más significativa desde que los transformers revolucionaron el NLP en 2017. El cambio no está en los modelos (aunque GPT-5.2, Claude Opus 4.5 y Gemini 3 Pro siguen empujando fronteras) sino en cómo los estamos usando.
+Iniciamos el año 2026, y la industria atraviesa su transición más significativa desde que los transformers revolucionaron el NLP en 2017. El cambio no está en los modelos (aunque GPT-5.2, Claude Opus 4.5 y Gemini 3 Pro siguen empujando fronteras) sino en cómo los estamos usando.
 
 2025 fue "el año de los agentes", según prácticamente todo analista de la industria. Pero la realidad es más matizada: **fue el año en que los agentes salieron del laboratorio**. Anthropic liberó el Model Context Protocol (MCP) en diciembre 2024, creando el "USB-C para IA" que permitió que los LLMs finalmente hablaran con el mundo exterior de forma estandarizada. OpenAI y Microsoft lo adoptaron inmediatamente. Google lanzó su propia implementación. Linux Foundation creó la Agentic AI Foundation.
 
 DeepSeek-R1 demostró en enero 2025 que modelos competitivos podían entrenarse fuera de los Estados Unidos, sacudiendo mercados y recalibrando expectativas globales. Durante todo 2025, vimos el despliegue de "agentic browsers" (Perplexity Comet, Opera Neon, GPT Atlas), workflow builders sin código (n8n, Google Antigravity), y coding agents que pasaron de experimentos a herramientas de trabajo diario.
 
-Pero ahora, en enero 2026, enfrentamos la pregunta real: **¿Cómo construimos sistemas agénticos que funcionen en producción?**
+Pero ahora, en pleno 2026, enfrentamos la pregunta real: **¿Cómo construimos sistemas agénticos que funcionen en producción?**
 
 Este documento es el mapa. No es un tutorial de "hello world". Es arquitectura de sistemas, patrones de diseño probados en batalla, y las decisiones que separan demos impresionantes de infraestructura que escala.
 
