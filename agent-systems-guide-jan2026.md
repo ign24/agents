@@ -9,14 +9,13 @@
 
 ## Para quién es esta guía
 
-Esta guía es para **ingenieros de IA que construyen sistemas agénticos en producción**, no para investigadores ni principiantes.
+No es una guía introductoria ni académica: el foco está en decisiones de ingeniería y experiencia práctica.
 
 Deberías leerla si:
 - Necesitás diseñar sistemas multi-agente que funcionen de verdad en producción
 - Querés entender patrones de orquestación (workflows vs. agentes autónomos)
 - Te importan la observabilidad, el control de costos y los trade-offs reales
 
-Salteala si buscás teoría, marcos académicos o ejemplos juguete.
 
 ---
 
