@@ -3,6 +3,23 @@
 
 *Enero 2026 - El año en que los agentes dejaron de ser demos*
 
+**Autor:** Ignacio Zúñiga Navarro | AI Engineer @ factor.com.ar  
+**Última actualización:** Enero 2026  
+**Contacto:** [LinkedIn](https://www.linkedin.com/in/ignaciozuniganavarro/) | [GitHub: @ign24]
+
+---
+
+## Para quién es esta guía
+
+Esta guía es para **ingenieros de IA que construyen sistemas agénticos en producción**, no para investigadores ni principiantes.
+
+Deberías leerla si:
+- Necesitás diseñar sistemas multi-agente que funcionen de verdad en producción
+- Querés entender patrones de orquestación (workflows vs. agentes autónomos)
+- Te importan la observabilidad, el control de costos y los trade-offs reales
+
+Salteala si buscás teoría, marcos académicos o ejemplos juguete.
+
 ---
 
 ## Prólogo: El Momento de Inflexión
@@ -1350,6 +1367,20 @@ Este es el momento. La infraestructura está lista. Los models son capaces. La i
 
 ---
 
+---
+
+## Licencia y uso
+
+Esta guía es de código abierto (MIT). Podés usarla, compartirla o adaptarla libremente.
+
+Si te resultó útil:
+- ⭐ Dale estrella al repo
+- Compartila con tu equipo
+- [Contratá a factor.com.ar para consultoría en IA](https://factor.com.ar)
+
+Para correcciones o sugerencias: abrí un issue o un PR.
+
+---
+
 *Documento actualizado: 28 Enero 2026*
 *Para updates: El landscape cambia cada semana. Seguí a los teams construyendo en público.*
-
