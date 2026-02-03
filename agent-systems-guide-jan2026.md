@@ -1,10 +1,8 @@
 # Ingeniería de Sistemas Agénticos en 2026
 ## De la Teoría a Producción: Una Perspectiva de Arquitectura End-to-End
 
-*Enero 2026 - El año en que los agentes dejaron de ser demos*
-
 **Autor:** Ignacio Zúñiga Navarro | AI Engineer @ factor.com.ar  
-**Última actualización:** Enero 2026  
+**Última actualización:** Febrero 2026  
 **Contacto:** [LinkedIn](https://www.linkedin.com/in/ignaciozuniganavarro/) | [GitHub: @ign24]
 
 ---
