@@ -1360,5 +1360,5 @@ Para correcciones o sugerencias: abrí un issue o un PR.
 
 ---
 
-*Documento actualizado: 28 Enero 2026*
+*Documento actualizado: 3 de Febrero de 2026*
 *Para updates: El landscape cambia cada semana. Seguí a los teams construyendo en público.*
